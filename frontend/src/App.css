@@ -1,0 +1,213 @@
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f8f8f8;
+  min-height: 100vh;
+}
+
+.App-header {
+  margin-bottom: 40px;
+}
+
+@font-face {
+  font-family: 'Avenir Book';
+  src: url('./fonts/Avenir-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Medium';
+  src: url('./fonts/Montserrat-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Regular';
+  src: url('./fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.product-item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.product-item:hover {
+  transform: translateY(-5px);
+}
+
+.product-item h2 {
+  font-family: 'Montserrat Medium', sans-serif;
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.product-item p:nth-of-type(1) {
+  font-family: 'Montserrat Regular', sans-serif;
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.product-item p:nth-of-type(2) {
+  font-family: 'Avenir Book', sans-serif;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.selected-color-name {
+  font-family: 'Avenir Book', sans-serif;
+  font-size: 12px;
+  color: #555;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.product-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.popularity-stars {
+  color: gold;
+  font-size: 1.2em;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.popularity-stars svg {
+    margin: 0 1px;
+}
+
+.color-picker {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.color-swatch {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.color-swatch:hover {
+  transform: scale(1.1);
+}
+
+.color-swatch.yellow {
+  background-color: #E6CA97;
+}
+
+.color-swatch.white {
+  background-color: #D9D9D9;
+}
+
+.color-swatch.rose {
+  background-color: #E1A4A9;
+}
+
+.color-swatch.selected {
+  border-color: #333;
+  box-shadow: 0 0 0 3px rgba(51, 51, 51, 0.3);
+}
+
+.selected-color-name {
+  font-size: 1em;
+  color: #555;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.carousel-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.product-item-wrapper {
+  padding: 10px;
+}
+
+.slick-prev, .slick-next {
+  font-size: 0;
+  line-height: 1;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: none;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  z-index: 10;
+  transition: background-color 0.3s;
+}
+
+.slick-prev:hover, .slick-next:hover {
+  background: rgba(0, 0, 0, 1);
+}
+
+.slick-prev:before, .slick-next:before {
+  font-family: 'slick' !important;
+  font-size: 35px !important;
+  line-height: 1;
+  color: black !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev {
+  left: -50px;
+}
+
+.slick-next {
+  right: -50px;
+}
+
+.slick-dots li button:before {
+  font-size: 10px;
+  color: #ccc;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .slick-prev {
+    left: 0px;
+  }
+  .slick-next {
+    right: 0px;
+  }
+}

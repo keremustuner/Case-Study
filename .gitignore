@@ -1,0 +1,19 @@
+/frontend/node_modules
+
+
+/venv/
+
+
+.env
+.flaskenv
+
+
+/frontend/build
+/__pycache__/ # Backend dosyaları ana dizinde olduğu için burası değişti
+
+
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
