@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request # 'request' zaten var, iyi
 import json
 import os
 import requests
@@ -9,7 +9,8 @@ from flask_cors import CORS
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app) 
+CORS(app, resources={r"/api/*": {"origins": "https://case-study-flax.vercel.app"}})
+
 
 
 APILAYER_API_KEY = os.getenv('APILAYER_API_KEY')
