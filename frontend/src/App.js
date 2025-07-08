@@ -16,7 +16,7 @@ function App() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const API_URL = 'http://127.0.0.1:5000/api/products';
+   const API_URL = 'https://case-study-xy2e.onrender.com/api/products';
 
     fetch(API_URL)
       .then(response => {
